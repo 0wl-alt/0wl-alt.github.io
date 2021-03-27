@@ -3,42 +3,8 @@
 
     
   <url>
-    <loc>https://0wl-alt.github.io/2021/03/27/HGAME-Week4-Writeup/</loc>
-    <lastmod>2021-03-27T07:15:51.516Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME-Week4-Writeup</title>
-        <pubTime>2021-03-27T07:10:15.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://0wl-alt.github.io/2021/03/27/HGAME-Week3-Writeup/</loc>
-    <lastmod>2021-03-27T07:06:40.199Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME-Week3-Writeup</title>
-        <pubTime>2021-03-27T07:01:21.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://0wl-alt.github.io/2021/03/27/HGAME-Week2-Writeup/</loc>
-    <lastmod>2021-03-27T06:59:30.707Z</lastmod>
+    <lastmod>2021-03-27T07:45:45.960Z</lastmod>
     <data>
         <display>
         <title>HGAME-Week2-Writeup</title>
@@ -48,6 +14,9 @@
          
          
            
+             
+              <breadCrumb title="Hgame2021" url="https://0wl-alt.github.io/categories/Hgame2021/"/>
+          
         </display>
     </data>
     </url>
@@ -55,7 +24,7 @@
     
   <url>
     <loc>https://0wl-alt.github.io/2021/03/26/HGAME-Week1-writeup/</loc>
-    <lastmod>2021-03-27T06:21:38.558Z</lastmod>
+    <lastmod>2021-03-27T07:45:36.991Z</lastmod>
     <data>
         <display>
         <title>HGAME-Week1-writeup</title>
@@ -65,6 +34,49 @@
          
          
            
+             
+              <breadCrumb title="Hgame2021" url="https://0wl-alt.github.io/categories/Hgame2021/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://0wl-alt.github.io/2021/03/27/HGAME-Week3-Writeup/</loc>
+    <lastmod>2021-03-27T07:44:35.224Z</lastmod>
+    <data>
+        <display>
+        <title>HGAME-Week3-Writeup</title>
+        <pubTime>2021-03-27T07:01:21.000Z</pubTime>
+        
+        <tag>hgame </tag>
+         
+         
+           
+             
+              <breadCrumb title="Hgame2021" url="https://0wl-alt.github.io/categories/Hgame2021/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://0wl-alt.github.io/2021/03/27/HGAME-Week4-Writeup/</loc>
+    <lastmod>2021-03-27T07:44:20.310Z</lastmod>
+    <data>
+        <display>
+        <title>HGAME-Week4-Writeup</title>
+        <pubTime>2021-03-27T07:10:15.000Z</pubTime>
+        
+        <tag>hgame </tag>
+         
+         
+           
+             
+              <breadCrumb title="Hgame2021" url="https://0wl-alt.github.io/categories/Hgame2021/"/>
+          
         </display>
     </data>
     </url>
