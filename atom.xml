@@ -6,7 +6,7 @@
   <link href="https://0wl-alt.github.io/atom.xml" rel="self"/>
   
   <link href="https://0wl-alt.github.io/"/>
-  <updated>2021-07-11T10:07:24.588Z</updated>
+  <updated>2021-07-15T09:34:08.838Z</updated>
   <id>https://0wl-alt.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bomb Lab</title>
+    <link href="https://0wl-alt.github.io/2021/07/15/Bomb-Lab/"/>
+    <id>https://0wl-alt.github.io/2021/07/15/Bomb-Lab/</id>
+    <published>2021-07-15T05:05:23.000Z</published>
+    <updated>2021-07-15T09:34:08.838Z</updated>
+    
+    
+    <summary type="html">&lt;article class=&quot;message is-info&quot;&gt;&lt;div class=&quot;message-body&quot;&gt;
+&lt;p&gt;csapp 上的 Bomb Lab，用 gdb 调试和手动翻译来获得答案&lt;/p&gt;
+&lt;/div&gt;&lt;/article&gt;</summary>
+    
+    
+    
+    
+    <category term="csapp" scheme="https://0wl-alt.github.io/tags/csapp/"/>
+    
+  </entry>
   
   <entry>
     <title>Data Lab</title>
