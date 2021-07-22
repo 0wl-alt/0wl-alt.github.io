@@ -73,6 +73,12 @@ body.night .hljs-strong {
 body.night .hljs-link {
   text-decoration: underline;
 }
+body.night .friend-card-item {
+  color: unset;
+}
+body.night .friend-title-item {
+  color: #c0c0c0;
+}
 body.night .content code {
   color: #cbba7d;
 }
@@ -421,6 +427,12 @@ body.night .twikoo code {
   }
   body:not(.light) .hljs-link {
     text-decoration: underline;
+  }
+  body:not(.light) .friend-card-item {
+    color: unset;
+  }
+  body:not(.light) .friend-title-item {
+    color: #c0c0c0;
   }
   body:not(.light) .content code {
     color: #cbba7d;
