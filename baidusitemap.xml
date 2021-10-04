@@ -3,15 +3,49 @@
 
     
   <url>
-    <loc>https://0wl-alt.github.io/2021/07/21/GoogleCTF-HEXAGON/</loc>
-    <lastmod>2021-07-23T15:36:34.966Z</lastmod>
+    <loc>https://0wl-alt.github.io/2021/10/04/UPX-%25E5%25A3%25B3%25E5%258F%258D%25E8%25A7%25A3%25E5%258E%258B%25E6%258A%2580%25E6%259C%25AF/</loc>
+    <lastmod>2021-10-04T09:49:10.807Z</lastmod>
     <data>
         <display>
-        <title>GoogleCTF2021 HEXAGON</title>
-        <pubTime>2021-07-21T07:54:35.000Z</pubTime>
+        <title>UPX 壳反解压技术</title>
+        <pubTime>2021-10-04T08:34:40.000Z</pubTime>
         
-        <tag>wp </tag>
+        <tag>upx </tag>
          
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://0wl-alt.github.io/2021/03/31/HGAME-Pwn-%25E9%25A2%2598%25E5%25AD%25A6%25E4%25B9%25A0/</loc>
+    <lastmod>2021-10-01T08:38:45.913Z</lastmod>
+    <data>
+        <display>
+        <title>HGAME  Pwn 题学习</title>
+        <pubTime>2021-03-31T07:10:05.000Z</pubTime>
+        
+        <tag>hgame </tag>
+         
+        <tag>pwn </tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://0wl-alt.github.io/2021/07/03/%25E8%25BF%2591%25E6%259C%259F%25E8%25AE%25A1%25E5%2588%2592/</loc>
+    <lastmod>2021-09-20T07:27:42.108Z</lastmod>
+    <data>
+        <display>
+        <title>近期计划</title>
+        <pubTime>2021-07-03T14:10:25.000Z</pubTime>
+        
          
            
         </display>
@@ -80,59 +114,6 @@
 
     
   <url>
-    <loc>https://0wl-alt.github.io/2021/07/15/Bomb-Lab/</loc>
-    <lastmod>2021-07-15T09:34:08.838Z</lastmod>
-    <data>
-        <display>
-        <title>Bomb Lab</title>
-        <pubTime>2021-07-15T05:05:23.000Z</pubTime>
-        
-        <tag>csapp </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://0wl-alt.github.io/2021/03/31/HGAME-Pwn-%25E9%25A2%2598%25E5%25AD%25A6%25E4%25B9%25A0/</loc>
-    <lastmod>2021-07-13T06:05:31.877Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME  Pwn 题学习</title>
-        <pubTime>2021-03-31T07:10:05.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-        <tag>pwn </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://0wl-alt.github.io/2021/07/10/Data-Lab/</loc>
-    <lastmod>2021-07-11T10:07:24.588Z</lastmod>
-    <data>
-        <display>
-        <title>Data Lab</title>
-        <pubTime>2021-07-10T11:40:10.000Z</pubTime>
-        
-        <tag>csapp </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://0wl-alt.github.io/2021/07/07/tctf2021-FEA/</loc>
     <lastmod>2021-07-07T16:30:03.965Z</lastmod>
     <data>
@@ -144,21 +125,6 @@
          
         <tag>idapython </tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://0wl-alt.github.io/2021/07/03/%25E8%25BF%2591%25E6%259C%259F%25E8%25AE%25A1%25E5%2588%2592/</loc>
-    <lastmod>2021-07-05T08:18:55.814Z</lastmod>
-    <data>
-        <display>
-        <title>近期计划</title>
-        <pubTime>2021-07-03T14:10:25.000Z</pubTime>
-        
          
            
         </display>
