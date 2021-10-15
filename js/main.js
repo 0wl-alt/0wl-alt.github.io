@@ -9,7 +9,7 @@
             }
         }
     });
-
+    
     if (typeof $.fn.lightGallery === 'function') {
         $('.article').lightGallery({ selector: '.gallery-item' });
     }
