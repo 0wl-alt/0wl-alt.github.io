@@ -389,7 +389,7 @@ th:not([align]) {
 }
 html {
   background-color: #f7f7f7;
-  font-size: 14px;
+  font-size: 12px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -538,7 +538,7 @@ article.media .date,
 article.media .categories,
 .article-licensing .licensing-title a,
 .article-licensing .licensing-meta h6 {
-  font-size: 0.85rem !important;
+  font-size: 0.95rem !important;
 }
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
@@ -560,7 +560,7 @@ article.media .categories,
     font-size: 1rem !important;
   }
   .is-size-7-mobile {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }
 @media screen and (min-width: 769px), print {
@@ -583,7 +583,7 @@ article.media .categories,
     font-size: 1rem !important;
   }
   .is-size-7-tablet {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }
 @media screen and (max-width: 1087px) {
@@ -606,7 +606,7 @@ article.media .categories,
     font-size: 1rem !important;
   }
   .is-size-7-touch {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }
 @media screen and (min-width: 1088px) {
@@ -629,7 +629,7 @@ article.media .categories,
     font-size: 1rem !important;
   }
   .is-size-7-desktop {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -652,7 +652,7 @@ article.media .categories,
     font-size: 1rem !important;
   }
   .is-size-7-widescreen {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }
 @media screen and (min-width: 1472px) {
@@ -675,7 +675,7 @@ article.media .categories,
     font-size: 1rem !important;
   }
   .is-size-7-fullhd {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
   }
 }
 .has-text-centered {
@@ -1491,7 +1491,7 @@ a.has-text-grey-lightest:focus {
   justify-content: flex-end;
 }
 .breadcrumb.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .breadcrumb.is-medium {
   font-size: 1.25rem;
@@ -1820,7 +1820,7 @@ a.list-item {
   font-size: 1rem;
 }
 .menu.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .menu.is-medium {
   font-size: 1.25rem;
@@ -1875,7 +1875,7 @@ a.list-item {
   text-decoration: underline;
 }
 .message.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .message.is-medium {
   font-size: 1.25rem;
@@ -3233,7 +3233,7 @@ a.navbar-item.is-active,
   margin: -0.25rem;
 }
 .pagination.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .pagination.is-medium {
   font-size: 1.25rem;
@@ -3702,7 +3702,7 @@ label.panel-block:hover {
   padding-right: 1.25em;
 }
 .tabs.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .tabs.is-medium {
   font-size: 1.25rem;
@@ -5086,7 +5086,7 @@ fieldset[disabled] .button.is-grey-lightest.is-inverted.is-outlined {
 }
 .button.is-small {
   border-radius: 2px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .button.is-normal {
   font-size: 1rem;
@@ -5150,7 +5150,7 @@ fieldset[disabled] .button {
 }
 .buttons.are-small .button:not(.is-normal):not(.is-medium):not(.is-large) {
   border-radius: 2px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .buttons.are-medium .button:not(.is-small):not(.is-normal):not(.is-large) {
   font-size: 1.25rem;
@@ -5400,7 +5400,7 @@ fieldset[disabled] .button {
   margin-top: 0;
 }
 .content.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .content.is-medium {
   font-size: 1.25rem;
@@ -5799,7 +5799,7 @@ fieldset[disabled] .button {
   background-color: transparent;
 }
 .progress.is-small {
-  height: 0.75rem;
+  height: 0.85rem;
 }
 .progress.is-medium {
   height: 1.25rem;
@@ -6065,7 +6065,7 @@ fieldset[disabled] .button {
   border-radius: 4px;
   color: #4a4a4a;
   display: inline-flex;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   height: 2em;
   justify-content: center;
   line-height: 1.5;
@@ -6146,7 +6146,7 @@ fieldset[disabled] .button {
   color: #363636;
 }
 .tag:not(body).is-normal {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .tag:not(body).is-medium {
   font-size: 1rem;
@@ -6261,7 +6261,7 @@ a.tag:hover {
   font-size: 1rem;
 }
 .title.is-7 {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .subtitle {
   color: #4a4a4a;
@@ -6295,7 +6295,7 @@ a.tag:hover {
   font-size: 1rem;
 }
 .subtitle.is-7 {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 .heading {
   display: block;
@@ -6589,7 +6589,7 @@ fieldset[disabled] .select select:-ms-input-placeholder {
 .input.is-small,
 .textarea.is-small {
   border-radius: 2px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .input.is-medium,
 .textarea.is-medium {
@@ -6886,7 +6886,7 @@ fieldset[disabled] .select select:hover {
 }
 .select.is-small {
   border-radius: 2px;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .select.is-medium {
   font-size: 1.25rem;
@@ -6911,7 +6911,7 @@ fieldset[disabled] .select select:hover {
   transform: none;
 }
 .select.is-loading.is-small:after {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .select.is-loading.is-medium:after {
   font-size: 1.25rem;
@@ -7179,7 +7179,7 @@ fieldset[disabled] .select select:hover {
   color: #363636;
 }
 .file.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .file.is-medium {
   font-size: 1.25rem;
@@ -7337,7 +7337,7 @@ fieldset[disabled] .select select:hover {
   margin-bottom: 0.5em;
 }
 .label.is-small {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .label.is-medium {
   font-size: 1.25rem;
@@ -7347,7 +7347,7 @@ fieldset[disabled] .select select:hover {
 }
 .help {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   margin-top: 0.25rem;
 }
 .help.is-white {
@@ -7516,7 +7516,7 @@ fieldset[disabled] .select select:hover {
     text-align: right;
   }
   .field-label.is-small {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     padding-top: 0.375em;
   }
   .field-label.is-normal {
@@ -7571,7 +7571,7 @@ fieldset[disabled] .select select:hover {
 .control.has-icons-right .input.is-small ~ .icon,
 .control.has-icons-left .select.is-small ~ .icon,
 .control.has-icons-right .select.is-small ~ .icon {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .control.has-icons-left .input.is-medium ~ .icon,
 .control.has-icons-right .input.is-medium ~ .icon,
@@ -7616,7 +7616,7 @@ fieldset[disabled] .select select:hover {
   z-index: 4;
 }
 .control.is-loading.is-small:after {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 .control.is-loading.is-medium:after {
   font-size: 1.25rem;

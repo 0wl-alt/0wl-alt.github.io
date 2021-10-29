@@ -9,29 +9,34 @@
 </head><body class="is-2-column"><script type="text/javascript" src="/js/imaegoo/night.js"></script><canvas id="universe"></canvas><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img class="logo-img" src="/" alt="0wl’s Blog" height="28"><img class="logo-img-dark" src="/" alt="0wl’s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives/">时间轴</a><a class="navbar-item" href="/categories/">分类</a><a class="navbar-item" href="/tags/">标签</a><a class="navbar-item" href="/about/">关于</a><a class="navbar-item" href="/friends/">友链</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i><span>  目录</span></a><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/0wl-alt"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-01T14:49:05.000Z" title="2021/7/1 下午10:49:05">2021-07-01</time>发表</span><span class="level-item"><time dateTime="2021-07-03T14:52:00.457Z" title="2021/7/3 下午10:52:00">2021-07-03</time>更新</span><span class="level-item">3 分钟读完 (大约466个字)</span><span class="level-item leancloud_visitors" id="/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/" data-flag-title="PE映像切换-minilctf"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="twikoo_visitors"><i class="fa fa-spinner fa-spin"></i></span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">PE映像切换-minilctf</h1><div class="content"><article class="message is-info"><div class="message-body">
 <p>记录一下反调试中的 PE 映像切换技术</p>
 </div></article>
-
 <span id="more"></span>
-
-<h2 id="有关-PE-映像切换"><a href="#有关-PE-映像切换" class="headerlink" title="有关 PE 映像切换"></a>有关 PE 映像切换</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><div class="notification is-info">
-<p>首先先以挂起的模式运行 A.exe 进程，然后将一个完全不同的 PE 文件的映像映射到 A.exe 的内存空间，并运行。A.exe 即 “外壳进程 ”，B.exe 为 “内核进程”    （相当于偷梁换柱</p>
+<h2 id="有关-PE-映像切换">有关 PE 映像切换</h2>
+<h3 id="概念">概念</h3>
+<div class="notification is-info">
+<p>首先先以挂起的模式运行 A.exe 进程，然后将一个完全不同的 PE 文件的映像映射到 A.exe 的内存空间，并运行。A.exe 即 “外壳进程 ”，B.exe 为 “内核进程”	（相当于偷梁换柱</p>
 <p>这一技术主要用于病毒程序的伪装，反调试</p>
 </div>
-
 <img src="/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/%E5%88%87%E6%8D%A2%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" class="">
-
-<h3 id="具体实现过程"><a href="#具体实现过程" class="headerlink" title="具体实现过程"></a>具体实现过程</h3><h4 id="0x01-把-real-exe-载入内存，并创建进程-fake-exe"><a href="#0x01-把-real-exe-载入内存，并创建进程-fake-exe" class="headerlink" title="0x01  把 real.exe 载入内存，并创建进程 fake.exe"></a>0x01  把 real.exe 载入内存，并创建进程 fake.exe</h4><p>​        此时进程处于挂起状态，可以<strong>自由操控内存空间</strong></p>
-<h4 id="0x02-获取-fake-exe-实际加载基地址"><a href="#0x02-获取-fake-exe-实际加载基地址" class="headerlink" title="0x02  获取 fake.exe 实际加载基地址"></a>0x02  获取 fake.exe 实际加载基地址</h4><img src="/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/imagebase.jpg" class="">
-
-
-
-<h4 id="0x03-获取-real-exe-的基地址"><a href="#0x03-获取-real-exe-的基地址" class="headerlink" title="0x03  获取 real.exe 的基地址"></a>0x03  获取 real.exe 的基地址</h4><p>​        在 PE 文件头中获取</p>
-<h4 id="0x04-比较这两个基地址"><a href="#0x04-比较这两个基地址" class="headerlink" title="0x04  比较这两个基地址"></a>0x04  比较这两个基地址</h4><h5 id="1-两个基地址相同"><a href="#1-两个基地址相同" class="headerlink" title="1.两个基地址相同"></a>1.两个基地址相同</h5><p>​        利用 ntdll 里的 <strong>ZwUnmapViewOfSection</strong> 卸载 fake.exe 的映射,分配内存空间再将 real.exe 映射到进程内存</p>
-<h5 id="2-两个基地址不同"><a href="#2-两个基地址不同" class="headerlink" title="2.两个基地址不同"></a>2.两个基地址不同</h5><p>​        可直接将 real.exe 映射到 fake.exe 进程内存，再把 PEB.Imagebase 改为 real.exe 的基地址</p>
-<h4 id="0x05-修改EP"><a href="#0x05-修改EP" class="headerlink" title="0x05  修改EP"></a>0x05  修改EP</h4><p>​        <code>CONTEXT.Eax</code> 存储 fake.exe 的 EP 地址，<code>CONTEXT.Eip</code> 存储 <strong>ntdll！RtlUserThreadStart</strong> 这个API的地址，通过这个API跳转到 EP 代码</p>
-<h2 id="miniLctf-Re1"><a href="#miniLctf-Re1" class="headerlink" title="miniLctf  Re1"></a>miniLctf  Re1</h2><p>​        在看完上面这部分内容后突然想起来之前的 <code>miniLctf</code> 里的 Re1 好像有涉及这方面的知识，于是就重新分析了一下<img src="/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/minil.png" class=""></p>
-<p>​        可以根据最后修改 EP 时的地址找到 real.exe 导出分析</p>
-<p>​        导出之后的解题过程就不详细叙述了应该比较简单，关注 TLS 就行</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<h3 id="具体实现过程">具体实现过程</h3>
+<h4 id="0x01-把-real-exe-载入内存，并创建进程-fake-exe">0x01  把 real.exe 载入内存，并创建进程 fake.exe</h4>
+<p>​		此时进程处于挂起状态，可以<strong>自由操控内存空间</strong></p>
+<h4 id="0x02-获取-fake-exe-实际加载基地址">0x02  获取 fake.exe 实际加载基地址</h4>
+<img src="/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/imagebase.jpg" class="">
+<h4 id="0x03-获取-real-exe-的基地址">0x03  获取 real.exe 的基地址</h4>
+<p>​		在 PE 文件头中获取</p>
+<h4 id="0x04-比较这两个基地址">0x04  比较这两个基地址</h4>
+<h5 id="1-两个基地址相同">1.两个基地址相同</h5>
+<p>​		利用 ntdll 里的 <strong>ZwUnmapViewOfSection</strong> 卸载 fake.exe 的映射,分配内存空间再将 real.exe 映射到进程内存</p>
+<h5 id="2-两个基地址不同">2.两个基地址不同</h5>
+<p>​		可直接将 real.exe 映射到 fake.exe 进程内存，再把 PEB.Imagebase 改为 real.exe 的基地址</p>
+<h4 id="0x05-修改EP">0x05  修改EP</h4>
+<p>​		<code>CONTEXT.Eax</code> 存储 fake.exe 的 EP 地址，<code>CONTEXT.Eip</code> 存储 <strong>ntdll！RtlUserThreadStart</strong> 这个API的地址，通过这个API跳转到 EP 代码</p>
+<h2 id="miniLctf-Re1">miniLctf  Re1</h2>
+<p>​		在看完上面这部分内容后突然想起来之前的 <code>miniLctf</code> 里的 Re1 好像有涉及这方面的知识，于是就重新分析了一下<img src="/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/minil.png" class=""></p>
+<p>​		可以根据最后修改 EP 时的地址找到 real.exe 导出分析</p>
+<p>​		导出之后的解题过程就不详细叙述了应该比较简单，关注 TLS 就行</p>
+<h2 id="参考资料">参考资料</h2>
+<ul>
 <li>《逆向工程核心原理》</li>
 </ul>
 </div><div class="article-licensing box"><div class="licensing-title"><p>PE映像切换-minilctf</p><p><a href="https://0wl-alt.github.io/2021/07/01/PE映像切换-minilctf/">https://0wl-alt.github.io/2021/07/01/PE映像切换-minilctf/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>0wl</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-07-01</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2021-07-03</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%8F%8D%E8%B0%83%E8%AF%95/">反调试</a></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_telegram"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_reddit"></a></div><script src="https://static.addtoany.com/menu/page.js" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" href="/" target="_blank" rel="noopener" data-type="afdian"><span class="icon is-small"><i class="fas fa-charging-station"></i></span><span>爱发电</span></a><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/img/alipay.jpg" alt="支付宝"></span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="buymeacoffee"><span class="icon is-small"><i class="fas fa-coffee"></i></span><span>送我杯咖啡</span></a><a class="button donate" href="/" target="_blank" rel="noopener" data-type="patreon"><span class="icon is-small"><i class="fab fa-patreon"></i></span><span>Patreon</span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/img/wechat.png" alt="微信"></span></a></div></div></div><div class="card"><nav class="post-navigation mt-4 level is-mobile card-content"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/03/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">近期计划</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/06/02/XCTF-Final-Spaceship/"><span class="level-item">XCTF Final: Spaceship </span><i class="level-item fas fa-chevron-right"></i></a></div></nav></div><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content twikoo" id="twikoo"></div><script src="https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js"></script><script>twikoo.init({
