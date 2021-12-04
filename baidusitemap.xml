@@ -1,302 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
   <url>
-    <loc>https://www.0wl.site/2021/07/03/%25E8%25BF%2591%25E6%259C%259F%25E8%25AE%25A1%25E5%2588%2592/</loc>
-    <lastmod>2021-12-04T06:02:58.923Z</lastmod>
-    <data>
-        <display>
-        <title>近期计划</title>
-        <pubTime>2021-07-03T14:10:25.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
+    <loc>https://www.0wl.site/2021/07/03/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/</loc>
+    <lastmod>2021-12-04</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/11/16/L3HCTF-luuuuua/</loc>
-    <lastmod>2021-11-17T06:21:21.772Z</lastmod>
-    <data>
-        <display>
-        <title>L3HCTF luuuuua</title>
-        <pubTime>2021-11-16T15:02:19.000Z</pubTime>
-        
-        <tag>wp </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-17</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/07/07/tctf2021-FEA/</loc>
-    <lastmod>2021-11-16T14:56:58.589Z</lastmod>
-    <data>
-        <display>
-        <title>tctf2021 FEA</title>
-        <pubTime>2021-07-07T12:38:50.000Z</pubTime>
-        
-        <tag>wp </tag>
-         
-        <tag>idapython </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/06/02/XCTF-Final-Spaceship/</loc>
-    <lastmod>2021-11-16T14:55:21.777Z</lastmod>
-    <data>
-        <display>
-        <title>XCTF Final: Spaceship </title>
-        <pubTime>2021-06-02T11:24:26.000Z</pubTime>
-        
-        <tag>wp </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
-    <loc>https://www.0wl.site/2021/05/23/windows-%25E5%25BC%2582%25E5%25B8%25B8%25E5%25A4%2584%25E7%2590%2586/</loc>
-    <lastmod>2021-11-16T14:54:59.283Z</lastmod>
-    <data>
-        <display>
-        <title>windows 异常处理</title>
-        <pubTime>2021-05-23T03:05:05.000Z</pubTime>
-        
-        <tag>windows </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>https://www.0wl.site/2021/05/23/windows-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
-    <loc>https://www.0wl.site/2021/03/31/HGAME-Pwn-%25E9%25A2%2598%25E5%25AD%25A6%25E4%25B9%25A0/</loc>
-    <lastmod>2021-11-16T14:54:34.833Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME  Pwn 题学习</title>
-        <pubTime>2021-03-31T07:10:05.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-        <tag>pwn </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>https://www.0wl.site/2021/03/31/HGAME-Pwn-%E9%A2%98%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/03/27/HGAME-Week4-Writeup/</loc>
-    <lastmod>2021-11-16T14:54:13.031Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME-Week4-Writeup</title>
-        <pubTime>2021-03-27T07:10:15.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-         
-           
-             
-              <breadCrumb title="Hgame2021" url="https://www.0wl.site/categories/Hgame2021/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/03/27/HGAME-Week3-Writeup/</loc>
-    <lastmod>2021-11-16T14:53:56.207Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME-Week3-Writeup</title>
-        <pubTime>2021-03-27T07:01:21.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-         
-           
-             
-              <breadCrumb title="Hgame2021" url="https://www.0wl.site/categories/Hgame2021/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/03/27/HGAME-Week2-Writeup/</loc>
-    <lastmod>2021-11-16T14:53:38.912Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME-Week2-Writeup</title>
-        <pubTime>2021-03-27T06:43:36.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-         
-           
-             
-              <breadCrumb title="Hgame2021" url="https://www.0wl.site/categories/Hgame2021/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/03/26/HGAME-Week1-writeup/</loc>
-    <lastmod>2021-11-16T14:53:22.395Z</lastmod>
-    <data>
-        <display>
-        <title>HGAME-Week1-writeup</title>
-        <pubTime>2021-03-26T15:52:16.000Z</pubTime>
-        
-        <tag>hgame </tag>
-         
-         
-           
-             
-              <breadCrumb title="Hgame2021" url="https://www.0wl.site/categories/Hgame2021/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
-    <loc>https://www.0wl.site/2021/04/05/2021%25E6%2595%25B0%25E5%25AD%2597%25E4%25B8%25AD%25E5%259B%25BD%25E8%2599%258E%25E7%25AC%25A6CTF-Re%25E9%25A2%2598%25E5%25A4%258D%25E7%258E%25B0/</loc>
-    <lastmod>2021-11-16T14:52:46.806Z</lastmod>
-    <data>
-        <display>
-        <title>2021数字中国虎符CTF Re题复现</title>
-        <pubTime>2021-04-05T12:05:47.000Z</pubTime>
-        
-        <tag>re </tag>
-         
-        <tag>wp </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>https://www.0wl.site/2021/04/05/2021%E6%95%B0%E5%AD%97%E4%B8%AD%E5%9B%BD%E8%99%8E%E7%AC%A6CTF-Re%E9%A2%98%E5%A4%8D%E7%8E%B0/</loc>
+    <lastmod>2021-11-16</lastmod>
+  </url>
   <url>
-    <loc>https://www.0wl.site/2021/10/04/UPX-%25E5%25A3%25B3%25E5%258F%258D%25E8%25A7%25A3%25E5%258E%258B%25E6%258A%2580%25E6%259C%25AF/</loc>
-    <lastmod>2021-10-04T09:49:10.807Z</lastmod>
-    <data>
-        <display>
-        <title>UPX 壳反解压技术</title>
-        <pubTime>2021-10-04T08:34:40.000Z</pubTime>
-        
-        <tag>upx </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>https://www.0wl.site/2021/10/04/UPX-%E5%A3%B3%E5%8F%8D%E8%A7%A3%E5%8E%8B%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2021-10-04</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/07/21/Xctf-Junk-Instruction/</loc>
-    <lastmod>2021-07-21T09:53:45.121Z</lastmod>
-    <data>
-        <display>
-        <title>Xctf进阶-Junk_Instruction</title>
-        <pubTime>2021-07-21T03:06:27.000Z</pubTime>
-        
-        <tag>wp </tag>
-         
-        <tag>MFC </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-07-21</lastmod>
+  </url>
   <url>
     <loc>https://www.0wl.site/2021/07/19/CISCN2021-little-evil/</loc>
-    <lastmod>2021-07-19T12:08:55.673Z</lastmod>
-    <data>
-        <display>
-        <title>CISCN2021 little_evil</title>
-        <pubTime>2021-07-19T11:35:20.000Z</pubTime>
-        
-        <tag>wp </tag>
-         
-        <tag>ruby </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <lastmod>2021-07-19</lastmod>
+  </url>
   <url>
-    <loc>https://www.0wl.site/2021/07/16/riscv%25E6%259E%25B6%25E6%259E%2584%25E7%259A%2584gdb%25E8%25B0%2583%25E8%25AF%2595/</loc>
-    <lastmod>2021-07-16T08:58:02.237Z</lastmod>
-    <data>
-        <display>
-        <title>riscv架构的gdb调试</title>
-        <pubTime>2021-07-16T07:28:45.000Z</pubTime>
-        
-        <tag>riscv </tag>
-         
-        <tag>gdb </tag>
-         
-        <tag>qemu </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
+    <loc>https://www.0wl.site/2021/07/16/riscv%E6%9E%B6%E6%9E%84%E7%9A%84gdb%E8%B0%83%E8%AF%95/</loc>
+    <lastmod>2021-07-16</lastmod>
+  </url>
   <url>
-    <loc>https://www.0wl.site/2021/07/01/PE%25E6%2598%25A0%25E5%2583%258F%25E5%2588%2587%25E6%258D%25A2-minilctf/</loc>
-    <lastmod>2021-07-03T14:52:00.457Z</lastmod>
-    <data>
-        <display>
-        <title>PE映像切换-minilctf</title>
-        <pubTime>2021-07-01T14:49:05.000Z</pubTime>
-        
-        <tag>反调试 </tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-</urlset>
+    <loc>https://www.0wl.site/2021/07/01/PE%E6%98%A0%E5%83%8F%E5%88%87%E6%8D%A2-minilctf/</loc>
+    <lastmod>2021-07-03</lastmod>
+  </url>
+</urlset> 
