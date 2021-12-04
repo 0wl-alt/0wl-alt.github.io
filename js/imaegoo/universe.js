@@ -1,1 +1,155 @@
-"use strict";!function(){window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="226,225,224",r=[];function c(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function d(){h.clearRect(0,0,n,e);for(var t=r.length,i=0;i<t;i++){var s=r[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function f(){this.reset=function(){this.giant=u(3),this.comet=!this.giant&&!o&&u(10),this.x=y(0,n-10),this.y=y(0,e),this.r=y(1.1,2.6),this.dx=y(t,6*t)+(this.comet+1-1)*t*y(50,120)+.1,this.dy=-y(t,6*t)-(this.comet+1-1)*t*y(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=y(.2,1-.4*(this.comet+1-1)),this.do=y(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba(180,184,240,"+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+a+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba(226,225,142,"+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function u(t){return Math.floor(1e3*Math.random())+1<10*t}function y(t,i){return Math.random()*(i-t)+t}c(),window.addEventListener("resize",c,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)r[t]=new f,r[t].reset();d()}(),function t(){document.body.classList.contains("night")&&d(),window.requestAnimationFrame(t)}()}();
+/**
+ * created by lvfan
+ * 2018-09-04
+ */
+
+
+(function drawBg() {
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    // const
+    var starDensity = 0.216;
+    var speedCoeff = 0.05;
+    var canva = document.getElementById('universe');
+
+    // let
+    var width;
+    var height;
+    var starCount;
+    /* no-unused-vars */
+    // var circleRadius;
+    // var circleCenter;
+    var first = true;
+    var giantColor = '180,184,240';
+    var starColor = '226,225,142';
+    var cometColor = '226,225,224';
+    var stars = [];
+    var universe;
+
+    windowResizeHandler();
+    window.addEventListener('resize', windowResizeHandler, false);
+
+    function windowResizeHandler() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        starCount = width * starDensity;
+        // circleRadius = (width > height ? height / 2 : width / 2);
+        // circleCenter = {
+        //   x: width / 2,
+        //   y: height / 2
+        // };
+        canva.setAttribute('width', width);
+        canva.setAttribute('height', height);
+    }
+
+    createUniverse();
+
+    function createUniverse() {
+        universe = canva.getContext('2d');
+        for (var i = 0; i < starCount; i++) {
+            stars[i] = new Star();
+            stars[i].reset();
+        }
+        draw();
+    }
+
+    function draw() {
+        universe.clearRect(0, 0, width, height);
+        var starsLength = stars.length;
+        for (var i = 0; i < starsLength; i++) {
+            var star = stars[i];
+            star.move();
+            star.fadeIn();
+            star.fadeOut();
+            star.draw();
+        }
+    }
+
+    function Star() {
+        this.reset = function () {
+            this.giant = getProbability(3);
+            this.comet = this.giant || first ? false : getProbability(10);
+            this.x = getRandInterval(0, width - 10);
+            this.y = getRandInterval(0, height);
+            this.r = getRandInterval(1.1, 2.6);
+            this.dx = getRandInterval(speedCoeff, 6 * speedCoeff) + (this.comet + 1 - 1) * speedCoeff * getRandInterval(50, 120) + speedCoeff * 2;
+            this.dy = -getRandInterval(speedCoeff, 6 * speedCoeff) - (this.comet + 1 - 1) * speedCoeff * getRandInterval(50, 120);
+            this.fadingOut = null;
+            this.fadingIn = true;
+            this.opacity = 0;
+            this.opacityTresh = getRandInterval(0.2, 1 - (this.comet + 1 - 1) * 0.4);
+            this.do = getRandInterval(0.0005, 0.002) + (this.comet + 1 - 1) * 0.001;
+        };
+        this.fadeIn = function () {
+            if (this.fadingIn) {
+                this.fadingIn = !(this.opacity > this.opacityTresh);
+                this.opacity += this.do;
+            }
+        };
+        this.fadeOut = function () {
+            if (this.fadingOut) {
+                this.fadingOut = !(this.opacity < 0);
+                this.opacity -= this.do / 2;
+                if (this.x > width || this.y < 0) {
+                    this.fadingOut = false;
+                    this.reset();
+                }
+            }
+        };
+        this.draw = function () {
+            universe.beginPath();
+            if (this.giant) {
+                universe.fillStyle = 'rgba(' + giantColor + ',' + this.opacity + ')';
+                universe.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
+            } else if (this.comet) {
+                universe.fillStyle = 'rgba(' + cometColor + ',' + this.opacity + ')';
+                universe.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
+                // comet tail
+                for (var i = 0; i < 30; i++) {
+                    universe.fillStyle = 'rgba(' + cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
+                    universe.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
+                    universe.fill();
+                }
+            } else {
+                universe.fillStyle = 'rgba(' + starColor + ',' + this.opacity + ')';
+                universe.rect(this.x, this.y, this.r, this.r);
+            }
+            universe.closePath();
+            universe.fill();
+        };
+        this.move = function () {
+            this.x += this.dx;
+            this.y += this.dy;
+            if (this.fadingOut === false) {
+                this.reset();
+            }
+            if (this.x > width - (width / 4) || this.y < 0) {
+                this.fadingOut = true;
+            }
+        };
+        (function () {
+            setTimeout(function () {
+                first = false;
+            }, 50);
+        })();
+    }
+
+    function getProbability(percents) {
+        return ((Math.floor(Math.random() * 1000) + 1) < percents * 10);
+    }
+
+    function getRandInterval(min, max) {
+        return (Math.random() * (max - min) + min);
+    }
+
+    /* ---------------------------------
+     *        www.imaegoo.com
+     *     NO DRAW IN LIGHT MODE
+     * --------------------------------- */
+    (function imaegoo () {
+        if (document.body.classList.contains('night')) {
+            draw();
+        }
+        window.requestAnimationFrame(imaegoo);
+    })();
+}());

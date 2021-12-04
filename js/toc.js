@@ -1,1 +1,80 @@
-"use strict";function _toConsumableArray(t){if(Array.isArray(t)){for(var e=0,r=Array(t.length);e<t.length;e++)r[e]=t[e];return r}return Array.from(t)}!function(m,p){void 0!==m.IntersectionObserver&&p.querySelectorAll("#toc").forEach(function(t){var s=new Set,f=new Map,c=Array.from(t.querySelectorAll(".menu-list > li > a")),e=!0,r=!1,t=void 0;try{for(var n,o=c[Symbol.iterator]();!(e=(n=o.next()).done);e=!0){var a=n.value,i=a.getAttribute("href").trim().slice(1),l=p.getElementById(i);l&&f.set(l,a)}}catch(e){r=!0,t=e}finally{try{!e&&o.return&&o.return()}finally{if(r)throw t}}var u=Array.from(f.keys()),y=new IntersectionObserver(function(t){var e=!0,r=!1,n=void 0;try{for(var o,a=t[Symbol.iterator]();!(e=(o=a.next()).done);e=!0){var i=o.value;i.isIntersecting?s.add(i.target):s.delete(i.target)}}catch(t){r=!0,n=t}finally{try{!e&&a.return&&a.return()}finally{if(r)throw n}}if(n=void 0,s.size?n=[].concat(_toConsumableArray(s)).sort(function(t,e){return t.offsetTop-e.offsetTop})[0]:u.length&&(n=u.filter(function(t){return t.offsetTop<m.scrollY}).sort(function(t,e){return e.offsetTop-t.offsetTop})[0]),n&&f.has(n)){c.forEach(function(t){return t.classList.remove("is-active")}),(n=f.get(n)).classList.add("is-active");for(var l=n.parentElement.parentElement;l.classList.contains("menu-list")&&"li"===l.parentElement.tagName.toLowerCase();)l.parentElement.children[0].classList.add("is-active"),l=l.parentElement.parentElement}},{threshold:0}),v=!0,r=!1,t=void 0;try{for(var h,d=u[Symbol.iterator]();!(v=(h=d.next()).done);v=!0)!function(){var e,r=h.value;y.observe(r),f.has(r)&&((e=f.get(r)).setAttribute("data-href",e.getAttribute("href")),e.setAttribute("href","javascript:;"),e.addEventListener("click",function(){"function"==typeof r.scrollIntoView&&r.scrollIntoView({behavior:"smooth"});var t=e.getAttribute("data-href");history.pushState?history.pushState(null,null,t):location.hash=t}),r.style.scrollMargin="1em")}()}catch(e){r=!0,t=e}finally{try{!v&&d.return&&d.return()}finally{if(r)throw t}}})}(window,document);
+(function (window, document) {
+  function register($toc) {
+    const currentInView = new Set();
+    const headingToMenu = new Map();
+    const $menus = Array.from($toc.querySelectorAll('.menu-list > li > a'));
+
+    for (const $menu of $menus) {
+      const elementId = $menu.getAttribute('href').trim().slice(1);
+      const $heading = document.getElementById(elementId);
+      if ($heading) {
+        headingToMenu.set($heading, $menu);
+      }
+    }
+
+    const $headings = Array.from(headingToMenu.keys());
+
+    const callback = (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          currentInView.add(entry.target);
+        } else {
+          currentInView.delete(entry.target);
+        }
+      }
+      let $heading;
+      if (currentInView.size) {
+        // heading is the first in-view heading
+        $heading = [...currentInView].sort(($el1, $el2) => $el1.offsetTop - $el2.offsetTop)[0];
+      } else if ($headings.length) {
+        // heading is the closest heading above the viewport top
+        $heading = $headings
+          .filter(($heading) => $heading.offsetTop < window.scrollY)
+          .sort(($el1, $el2) => $el2.offsetTop - $el1.offsetTop)[0];
+      }
+      if ($heading && headingToMenu.has($heading)) {
+        $menus.forEach(($menu) => $menu.classList.remove('is-active'));
+
+        const $menu = headingToMenu.get($heading);
+        $menu.classList.add('is-active');
+        let $menuList = $menu.parentElement.parentElement;
+        while (
+          $menuList.classList.contains('menu-list') &&
+          $menuList.parentElement.tagName.toLowerCase() === 'li'
+        ) {
+          $menuList.parentElement.children[0].classList.add('is-active');
+          $menuList = $menuList.parentElement.parentElement;
+        }
+      }
+    };
+    const observer = new IntersectionObserver(callback, { threshold: 0 });
+
+    for (const $heading of $headings) {
+      observer.observe($heading);
+      // smooth scroll to the heading
+      if (headingToMenu.has($heading)) {
+        const $menu = headingToMenu.get($heading);
+        $menu.setAttribute('data-href', $menu.getAttribute('href'));
+        $menu.setAttribute('href', 'javascript:;');
+        $menu.addEventListener('click', () => {
+          if (typeof $heading.scrollIntoView === 'function') {
+            $heading.scrollIntoView({ behavior: 'smooth' });
+          }
+          const anchor = $menu.getAttribute('data-href');
+          if (history.pushState) {
+            history.pushState(null, null, anchor);
+          } else {
+            location.hash = anchor;
+          }
+        });
+        $heading.style.scrollMargin = '1em';
+      }
+    }
+  }
+
+  if (typeof window.IntersectionObserver === 'undefined') {
+    return;
+  }
+
+  document.querySelectorAll('#toc').forEach(register);
+})(window, document);
