@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.0wl.site/%E5%9B%BA%E4%BB%B6%E8%B0%83%E8%AF%95/</loc>
+    
+    <lastmod>2022-03-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.0wl.site/BUU-ciscn-2019-n-7/</loc>
     
     <lastmod>2022-03-01</lastmod>
@@ -202,7 +211,7 @@
 
   <url>
     <loc>https://www.0wl.site/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -210,98 +219,105 @@
   
   <url>
     <loc>https://www.0wl.site/tags/re/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/wp/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/hgame/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/pwn/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/%E5%8F%8D%E8%B0%83%E8%AF%95/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/upx/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/MFC/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/riscv/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/gdb/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/qemu/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/idapython/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/windows/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/ruby/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/lua/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.0wl.site/tags/iot/</loc>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -310,7 +326,7 @@
   
   <url>
     <loc>https://www.0wl.site/categories/Hgame2021/</loc>
-    <lastmod>2022-03-01</lastmod>
+    <lastmod>2022-03-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
