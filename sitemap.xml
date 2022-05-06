@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.0wl.site/2022/05/06/ida-android-server-%E5%9C%A8-Android10-%E4%B8%8D%E6%98%BE%E7%A4%BA%E7%BA%BF%E7%A8%8B%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    
+    <lastmod>2022-05-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.0wl.site/2022/04/05/BUU-ciscn-2019-s-1/</loc>
     
     <lastmod>2022-04-05</lastmod>
@@ -256,7 +265,7 @@
 
   <url>
     <loc>https://www.0wl.site/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -264,119 +273,126 @@
   
   <url>
     <loc>https://www.0wl.site/tags/re/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/wp/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/pwn/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/hgame/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/%E5%8F%8D%E8%B0%83%E8%AF%95/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/upx/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/MFC/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/buu/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/riscv/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/gdb/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/qemu/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/lua/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/idapython/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/windows/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/iot/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/ruby/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.0wl.site/tags/cve%E5%A4%8D%E7%8E%B0/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.0wl.site/tags/android/</loc>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -385,7 +401,7 @@
   
   <url>
     <loc>https://www.0wl.site/categories/Hgame2021/</loc>
-    <lastmod>2022-04-05</lastmod>
+    <lastmod>2022-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
