@@ -10831,34 +10831,17 @@ article.media .media-content .title {
   margin: 0;
   line-height: inherit;
 }
-article.article {
-  padding: 1.5rem 1.8rem;
-}
-article.article .title {
-  margin: 0 0 0.5rem -0.1rem !important;
-}
-article.article .title .fas {
-  margin-right: 0.5rem;
-}
 article.article .article-meta,
 article.article .article-tags {
   color: #848484;
 }
 article.article .article-meta {
   overflow-x: auto;
-  margin-bottom: 1.5rem !important;
-}
-article.article .article-meta >:first-child {
-  flex-wrap: wrap;
-  width: 100%;
-}
-article.article .article-meta >:first-child >* {
-  flex-grow: 0 !important;
+  margin-bottom: 0.5rem;
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.2rem;
-  letter-spacing: 0.02rem;
+  font-size: 1.1rem;
 }
 article.article .content h1 {
   font-size: 1.75em;
@@ -10876,10 +10859,9 @@ article.article .content h5 {
   font-size: 1em;
 }
 article.article .content pre {
-  font-size: 0.95em;
+  font-size: 0.85em;
 }
 article.article .content code {
-  font-size: 0.95em;
   padding: 0;
   background: transparent;
   overflow-wrap: break-word;
@@ -10895,10 +10877,14 @@ article.article .content blockquote footer strong + cite {
 }
 article.article .content .message.message-immersive {
   border-radius: 0;
-  margin: 0 -1.8rem 1.5rem -1.8rem;
+  margin: 0 -1.5rem 1.5rem -1.5rem;
 }
 article.article .content .message.message-immersive .message-body {
   border: none;
+}
+article.article .article-tags {
+  display: flex;
+  flex-wrap: wrap;
 }
 .rtl {
   direction: rtl;
@@ -11282,19 +11268,12 @@ footer.footer .level-end .field {
     border-radius: 0;
   }
 }
-div.highlight-tree td.code pre {
-  font-family: Consolas, Menlo, Courier, monospace !important;
-  font-size: 0.9em;
-}
 figure.highlight {
   padding: 0;
   width: 100%;
   position: relative;
   margin: 1em 0 1em !important;
   border-radius: 0;
-}
-figure.highlight span.fold {
-  width: 18px;
 }
 figure.highlight.folded .highlight-body {
   height: 0;
@@ -11379,6 +11358,9 @@ figure.highlight .section {
   vertical-align: inherit;
   min-width: inherit;
   border-radius: inherit;
+}
+figure.highlight.foldable div.level-left {
+  cursor: pointer;
 }
 .gist table tr:hover {
   background: transparent;
@@ -11607,6 +11589,9 @@ figure.highlight .section {
   line-height: inherit;
 }
 .MathJax,
+.MathJax_Display,
+.MJXc-display,
+.MathJax_SVG_Display,
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
@@ -11816,7 +11801,12 @@ body.ready:before {
   .column-left.is-sticky,
   .column-right.is-sticky,
   .column-right-shadow.is-sticky {
-    top: 10px;
+    top: 70px;
+  }
+  .navbar {
+    z-index: 100;
+    position: sticky;
+    top: 0;
   }
 }
 .article .content {
@@ -11935,6 +11925,18 @@ article .title:hover a {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+.twikoo code .tag {
+  display: inline;
+  padding: 0;
+}
+.widget .tags .tag:first-child {
+  background: #f5f5f5;
+  color: #242424;
+}
+.widget .tags .tag:last-child {
+  background: #cdcdcd;
+  color: #242424;
+}
 #universe {
   display: none;
 }
@@ -12010,12 +12012,6 @@ body.night .hljs-strong {
 body.night .hljs-link {
   text-decoration: underline;
 }
-body.night .friend-card-item {
-  color: unset;
-}
-body.night .friend-title-item {
-  color: #c0c0c0;
-}
 body.night .content code {
   color: #cbba7d;
 }
@@ -12066,6 +12062,9 @@ body.night .card {
 body.night .card:hover {
   background-color: rgba(40,44,52,0.8);
 }
+body.night .card .breadcrumb li.is-active a {
+  color: #c0c0c0;
+}
 body.night .footer {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
@@ -12080,25 +12079,30 @@ body.night .textarea {
 }
 body.night .button.is-primary,
 body.night .button.is-light,
-body.night .button.is-small {
+body.night .button.is-small,
+body.night .cc-window .cc-compliance > .cc-btn {
   background-color: #373d48;
   color: #c0c0c0;
 }
 body.night .button.is-primary:hover,
 body.night .button.is-light:hover,
 body.night .button.is-small:hover,
+body.night .cc-window .cc-compliance > .cc-btn:hover,
 body.night .button.is-primary.is-hovered,
 body.night .button.is-light.is-hovered,
-body.night .button.is-small.is-hovered {
+body.night .button.is-small.is-hovered,
+body.night .cc-window .cc-compliance > .cc-btn.is-hovered {
   color: #fff;
   background-color: #434a56;
 }
 body.night .button.is-primary:active,
 body.night .button.is-light:active,
 body.night .button.is-small:active,
+body.night .cc-window .cc-compliance > .cc-btn:active,
 body.night .button.is-primary.is-active,
 body.night .button.is-light.is-active,
-body.night .button.is-small.is-active {
+body.night .button.is-small.is-active,
+body.night .cc-window .cc-compliance > .cc-btn.is-active {
   color: #fff;
   background-color: #2c313a;
 }
@@ -12193,7 +12197,8 @@ body.night .v * {
 }
 body.night .media-content,
 body.night .has-text-grey,
-body.night .link-muted {
+body.night .link-muted,
+body.night .cc-window {
   color: #c0c0c0 !important;
 }
 body.night a {
@@ -12203,10 +12208,12 @@ body.night a:hover {
   color: #fff;
 }
 body.night .timeline a,
+body.night .twikoo-new-container a,
 body.night [data-type="recent-posts"] a {
   color: #c0c0c0;
 }
 body.night .timeline a:hover,
+body.night .twikoo-new-container a:hover,
 body.night [data-type="recent-posts"] a:hover {
   color: #fff;
 }
@@ -12289,6 +12296,10 @@ body.night input:-webkit-autofill {
   -webkit-text-fill-color: #c0c0c0 !important;
   box-shadow: 0 0 0px 1000px #373d48 inset;
 }
+body.night .cc-window {
+  background-color: rgba(40,44,52,0.5) !important;
+  backdrop-filter: blur(10px);
+}
 body.night .twikoo pre {
   background-color: #373d48;
 }
@@ -12365,12 +12376,6 @@ body.night .twikoo code {
   body:not(.light) .hljs-link {
     text-decoration: underline;
   }
-  body:not(.light) .friend-card-item {
-    color: unset;
-  }
-  body:not(.light) .friend-title-item {
-    color: #c0c0c0;
-  }
   body:not(.light) .content code {
     color: #cbba7d;
   }
@@ -12421,6 +12426,9 @@ body.night .twikoo code {
   body:not(.light) .card:hover {
     background-color: rgba(40,44,52,0.8);
   }
+  body:not(.light) .card .breadcrumb li.is-active a {
+    color: #c0c0c0;
+  }
   body:not(.light) .footer {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -12435,25 +12443,30 @@ body.night .twikoo code {
   }
   body:not(.light) .button.is-primary,
   body:not(.light) .button.is-light,
-  body:not(.light) .button.is-small {
+  body:not(.light) .button.is-small,
+  body:not(.light) .cc-window .cc-compliance > .cc-btn {
     background-color: #373d48;
     color: #c0c0c0;
   }
   body:not(.light) .button.is-primary:hover,
   body:not(.light) .button.is-light:hover,
   body:not(.light) .button.is-small:hover,
+  body:not(.light) .cc-window .cc-compliance > .cc-btn:hover,
   body:not(.light) .button.is-primary.is-hovered,
   body:not(.light) .button.is-light.is-hovered,
-  body:not(.light) .button.is-small.is-hovered {
+  body:not(.light) .button.is-small.is-hovered,
+  body:not(.light) .cc-window .cc-compliance > .cc-btn.is-hovered {
     color: #fff;
     background-color: #434a56;
   }
   body:not(.light) .button.is-primary:active,
   body:not(.light) .button.is-light:active,
   body:not(.light) .button.is-small:active,
+  body:not(.light) .cc-window .cc-compliance > .cc-btn:active,
   body:not(.light) .button.is-primary.is-active,
   body:not(.light) .button.is-light.is-active,
-  body:not(.light) .button.is-small.is-active {
+  body:not(.light) .button.is-small.is-active,
+  body:not(.light) .cc-window .cc-compliance > .cc-btn.is-active {
     color: #fff;
     background-color: #2c313a;
   }
@@ -12548,7 +12561,8 @@ body.night .twikoo code {
   }
   body:not(.light) .media-content,
   body:not(.light) .has-text-grey,
-  body:not(.light) .link-muted {
+  body:not(.light) .link-muted,
+  body:not(.light) .cc-window {
     color: #c0c0c0 !important;
   }
   body:not(.light) a {
@@ -12558,10 +12572,12 @@ body.night .twikoo code {
     color: #fff;
   }
   body:not(.light) .timeline a,
+  body:not(.light) .twikoo-new-container a,
   body:not(.light) [data-type="recent-posts"] a {
     color: #c0c0c0;
   }
   body:not(.light) .timeline a:hover,
+  body:not(.light) .twikoo-new-container a:hover,
   body:not(.light) [data-type="recent-posts"] a:hover {
     color: #fff;
   }
@@ -12643,6 +12659,10 @@ body.night .twikoo code {
   body:not(.light) input:-webkit-autofill {
     -webkit-text-fill-color: #c0c0c0 !important;
     box-shadow: 0 0 0px 1000px #373d48 inset;
+  }
+  body:not(.light) .cc-window {
+    background-color: rgba(40,44,52,0.5) !important;
+    backdrop-filter: blur(10px);
   }
   body:not(.light) .twikoo pre {
     background-color: #373d48;
